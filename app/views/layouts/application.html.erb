@@ -2,14 +2,80 @@
 <html>
   <head>
     <title>Fitrak</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/2dbaab7189.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <!-- <nav class="sidebar-nav navbar-purple">
+      <a class="navbar-brand nav-logo" href="#">
+        <img src="/assets/whitelogo.png" height="50" alt="">
+      </a>
+    </nav> -->
+    <div class="sidebar rfont">
+      <div class="nav-logo">
+      </div>
+      <div class="side__profile__card centered">
+        <div class="prof__img">
+          <img src="assets/profileplaceholder.png" style = 'object-fit:contain;' alt="">
+        </div>
+        <div class="prof__name--card">
+          <div class="prof__name rfont">
+            Brix Joshua Tanhueco
+          </div>
+        </div>
+      </div>
+      <a href = "#">
+      <div class="side__item side-sched__card">
+        <div class="side__icon">
+          <i class="far fa-calendar"></i>
+        </div>
+        <div class="side__text">
+          Schedule
+        </div>
+      </div>
+      </a>
+      <a href="#">
+      <div class="side__item side-sched__card">
+        <div class="side__icon">
+          <i class="fas fa-user-friends"></i>
+        </div>
+
+        <div class="side__text">
+          Clients
+        </div>
+      </div>
+      </a>
+      <a href="#">
+      <div class="side__item side-sched__card">
+        <div class="side__icon">
+          <i class="far fa-comments"></i>
+        </div>
+
+        <div class="side__text">
+          Messages
+
+        </div>
+
+      </div>
+      </a>
+      <a href="#">
+      <div class="side__item side-sched__card">
+        <div class="side__icon">
+          <i class="fas fa-cog"></i>
+        </div>
+        <div class="side__text">
+        Edit Profile
+        </div>
+      </div>
+      </a>
+    </div>
     <%= yield %>
+
   </body>
 </html>
