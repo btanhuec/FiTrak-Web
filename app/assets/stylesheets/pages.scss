@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .index__wrapper{
+  background-image:url(/assets/overallbg.svg);
+  background-position:-700px -750px;
+  background-repeat:no-repeat;
   float:left;
   display:flex;
   padding:20px;
@@ -28,6 +31,7 @@
   border-width:thin;
   border-style:solid;
   border-color:white;
+  visibility:hidden;
 }
 
 .heading{
@@ -78,4 +82,48 @@
   align-items: center;
   justify-content: center;
   border-radius:10px;
+}
+.page__headers{
+  margin-top:50px;
+  width:900px;
+  height:300px;
+  // border-radius:20px;
+  // background-color:white;
+}
+
+.header__cards{
+  float:left;
+  border-width:2px;
+  border-style:solid;
+  border-color:#3b60e4;
+  margin-right:10px;
+  width:200px;
+  height:150px;
+  border-radius:10px;
+  background-color:white;
+  display:inline-block;
+}
+
+.header__text{
+  text-align:center;
+  font-size:1vw;
+  weight:300;
+}
+
+.card__bg{
+  background-color:#3b60e4;
+  color:white;
+  border-color:white;
+}
+.header__text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:75px;
+  font-size:15pt;
+  font-weight:400;
+}
+.header__num{
+  text-align:center;
+  font-size:30pt;
 }

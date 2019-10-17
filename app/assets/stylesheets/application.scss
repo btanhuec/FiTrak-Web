@@ -16,19 +16,19 @@
  @import "bootstrap";
 
  .rfont{
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Poppins', sans-serif;
  }
 
 .sidebar{
   float:left;
-  background-color:#7678ed;
+  background-color:white;
   height:100vh;
   width:15%;
-  color:white;
+  color:#292F36;
   padding-top:10px;
   border-right-style:solid;
   border-width:thick;
-  border-color:#70CAD1;
+  border-color:#7678ED;
 }
 
 .navbar-purple{
@@ -36,7 +36,7 @@
   width:100%;
 }
 .nav-logo{
-  background: url(/assets/whitelogo.png);
+  background: url(/assets/coloredlogo.png);
   background-repeat:no-repeat;
   background-size: contain;
   background-position:center;
@@ -53,18 +53,20 @@
 .side__item{
   height:5%;
   width:100%;
-  background-color:#70CAD1;
+  background-color:white;
+  color:black;
   text-align:center;
-  font-size:15pt;
+  font-size:12pt;
   padding-top:10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight:100;
+  font-weight:300;
 }
 
 .side__item:hover{
-  background-color: #255F85;
+  background-color: #7678ED;
+  color:white;
 }
 .centered{
 
@@ -72,7 +74,7 @@
 .prof__name{
   text-align:center;
   font-size:17pt;
-  font-weight:100;
+  font-weight:300;
 }
 .prof__name--card{
   display: flex;
