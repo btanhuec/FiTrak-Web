@@ -1,0 +1,81 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.index__wrapper{
+  float:left;
+  display:flex;
+  padding:20px;
+  padding-left:100px;
+  padding-right:100px;
+  width:85%;
+  display:block;
+}
+
+.page__title{
+  font-size:40pt;
+  color:white;
+  font-weight:300;
+  width:100%;
+  height:10%;
+  text-align:center;
+}
+
+.index__notifications__container{
+  width:40%;
+  height:42vh;
+  border-radius:25px;
+  background-color: #7678ED;
+  border-width:thin;
+  border-style:solid;
+  border-color:white;
+}
+
+.heading{
+  text-align:center;
+  width:100%;
+  height:20%;
+  color:white;
+  font-size:20pt;
+}
+
+.notif__card{
+  width:100%;
+  height:10vh;
+  background-color:white;
+  border-top-style:solid;
+  border-bottom-style:solid;
+  border-color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif__icon{
+  width:20%;
+  height:100%;
+  font-size:2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#70CAD1;
+
+}
+
+.notif__content{
+  width:60%;
+  height:100%;
+  font-size:12pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif__time{
+  width:15%;
+  height:60%;
+  background-color:#70CAD1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius:10px;
+}

@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @import "bootstrap";
+
+ .rfont{
+   font-family: 'Roboto', sans-serif;
+ }
+
+.sidebar{
+  float:left;
+  background-color:#7678ed;
+  height:100vh;
+  width:15%;
+  color:white;
+  padding-top:10px;
+  border-right-style:solid;
+  border-width:thick;
+  border-color:#70CAD1;
+}
+
+.navbar-purple{
+  height:50px;
+  width:100%;
+}
+.nav-logo{
+  background: url(/assets/whitelogo.png);
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position:center;
+  height:4vh;
+  border-style:none;
+  border-color:white;
+  margin-left:10px;
+  margin-right:10px;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius:15px;
+}
+
+.side__item{
+  height:5%;
+  width:100%;
+  background-color:#70CAD1;
+  text-align:center;
+  font-size:15pt;
+  padding-top:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight:100;
+}
+
+.side__item:hover{
+  background-color: #255F85;
+}
+.centered{
+
+}
+.prof__name{
+  text-align:center;
+  font-size:17pt;
+  font-weight:100;
+}
+.prof__name--card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+}
+.prof__img{
+  overflow: hidden;
+  height:60%;
+  width:60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style:solid;
+  border-width:thin;
+  border-radius:20%;
+  margin-left:20%;
+  margin-right:20%;
+  margin-bottom:10%;
+  background:white;
+}
+
+.side__profile__card{
+  height:30%;
+  padding-top:20%;
+}
+
+.side__icon{
+  width:20%;
+  height:100%;
+}
+
+.side__text{
+  height:100%;
+  width:80%;
+}

@@ -1,0 +1,50 @@
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Pages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pages.each do |page| %>
+      <tr>
+        <td><%= link_to 'Show', page %></td>
+        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Page', new_page_path %> -->
+<head>
+
+</head>
+<body style = "background-color:#292F36">
+  <div class="index__wrapper rfont">
+    <div class="page__title">
+      Dashboard
+    </div>
+    <div class="index__notifications__container">
+      <div class="heading">
+        Notifications
+      </div>
+      <div class="notif__card">
+        <div class="notif__icon">
+          <i class="fas fa-user-friends"></i>
+        </div>
+        <div class="notif__content">
+          You have three new client requests
+        </div>
+        <div class="notif__time">
+          VIEW
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
