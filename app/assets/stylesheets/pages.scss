@@ -2,16 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .index__wrapper{
-  background-image:url(/assets/overallbg.svg);
-  background-position:-700px -750px;
+  background-color: #211a1d;
+  // background-position: center;
   background-repeat:no-repeat;
-  float:left;
-  display:flex;
-  padding:20px;
+  // float:right;
+  // display:flex;
+  margin-left:200px;
   padding-left:100px;
   padding-right:100px;
-  width:85%;
-  display:block;
+  // width:100%;
+  height:100vh;
+}
+.index__bg{
+  // background:#7678ED;
+  // background-size:cover;
+  // height:50vh;
+  // width:100%;
 }
 
 .page__title{
@@ -84,29 +90,42 @@
   border-radius:10px;
 }
 .page__headers{
-  margin-top:50px;
-  width:900px;
-  height:300px;
+  padding-top:1vh;
+  padding-bottom:1vh;
+  width:40%;
+  height:50%;
+  background-color:#3b60e4;
+  border-width:2px;
+  border-style:solid;
+  border-color:white;
   // border-radius:20px;
-  // background-color:white;
+}
+.header__container{
+  width:100%;
+  // height:5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__cards{
   float:left;
-  border-width:2px;
-  border-style:solid;
-  border-color:#3b60e4;
-  margin-right:10px;
-  width:200px;
-  height:150px;
-  border-radius:10px;
-  background-color:white;
+  // margin-right:10px;
+  // width:200px;
+  // height:150px;
+  // border-radius:10px;
+  background-color:#3b60e4;
+  color:white;
   display:inline-block;
 }
 
-.header__text{
+.cards__text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align:center;
-  font-size:1vw;
+  font-size:2vh;
+  height:50%;
   weight:300;
 }
 
@@ -125,5 +144,114 @@
 }
 .header__num{
   text-align:center;
-  font-size:30pt;
+  font-size:3vh;
+}
+
+.greeting__container{
+  display:block;
+  // margin-left:2.5%;
+  // margin-right:2.5%;
+  margin-left:-100px;
+  margin-right:-100px;
+  margin-bottom:2.5vh;
+
+  background-color: #6320ee;
+  padding-top:1vh;
+  padding-bottom:1vh;
+    height:10vh;
+  padding-left:2.5%;
+  padding-right:2.5%;
+}
+
+.greeting__left{
+  width:40%;
+  color:white;
+}
+.greeting__right{
+  width:60%;
+}
+
+.greeting__text--first{
+  font-size:4vh;
+  font-weight:100;
+}
+
+.greeting__name{
+  font-weight:500;
+}
+
+.greeting__text--second{
+  font-size:2vh;
+  font-weight:100;
+}
+
+.greeting__notif{
+  font-weight:500;
+}
+
+.index__row{
+  display:block;
+  margin-left:2.5%;
+  margin-right:2.5%;
+  // padding-top:2.5%;
+  // padding-left:2.5%;
+  // padding-right:2.5%;
+  // padding-bottom:2.5%;
+  height:40%;
+  width:95%;
+  // background-color:white;
+}
+
+.index__left__container{
+  border-radius:20px;
+  padding-left:2.5%;
+  padding-right:2.5%;
+  float:left;
+  width:68%;
+  height:100%;
+  background-color: #3A3E46;
+}
+
+.index__right__container{
+  border-radius:20px;
+  padding-left:2.5%;
+  padding-right:2.5%;
+  float:right;
+  width:30%;
+  height:100%;
+  background-color: #3A3E46;
+}
+
+.index__container--card{
+  border-radius:20px;
+  width:32%;
+  height:100%;
+  background-color: #3A3E46;
+
+}
+
+.center__flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index__spacer{
+  width:2%;
+  height:100%;
+}
+
+.row__bottom{
+  margin-top:2vh;
+}
+
+.index__card__title{
+  width:100%;
+  text-align:center;
+  font-weight:100;
+  font-size:18pt;
+  margin-top:10px;
+  margin-bottom:10px;
+  color:white;
+  letter-spacing:2px;
 }

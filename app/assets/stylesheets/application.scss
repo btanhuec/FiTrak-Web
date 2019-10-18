@@ -23,7 +23,7 @@
   float:left;
   background-color:white;
   height:100vh;
-  width:15%;
+  width:200px;
   color:#292F36;
   padding-top:10px;
   border-right-style:solid;
@@ -84,16 +84,16 @@
 }
 .prof__img{
   overflow: hidden;
-  height:60%;
-  width:60%;
+  height:100px;
+  width:100px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-style:solid;
   border-width:thin;
   border-radius:20%;
-  margin-left:20%;
-  margin-right:20%;
+  margin-left:50px;
+  margin-right:50px;
   margin-bottom:10%;
   background:white;
 }

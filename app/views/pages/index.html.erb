@@ -3,21 +3,21 @@
 <h1>Pages</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<thead>
+<tr>
+<th colspan="3"></th>
+</tr>
+</thead>
 
-  <tbody>
-    <% @pages.each do |page| %>
-      <tr>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<tbody>
+<% @pages.each do |page| %>
+<tr>
+<td><%= link_to 'Show', page %></td>
+<td><%= link_to 'Edit', edit_page_path(page) %></td>
+<td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+</tbody>
 </table>
 
 <br>
@@ -26,49 +26,104 @@
 
 </head>
 <body>
-  <div class="index__wrapper rfont">
-    <!-- <div class="page__title">
-      Dashboard
-    </div> -->
-    <div class="page__headers">
-      <div class="header__cards card__bg rfont">
-        <div class="header__text rfont">
-          RATING
-        </div>
-        <div class="header__num">7.8</div>
+  <!-- <div class="index__bg">
+</div> -->
+<div class="index__wrapper rfont">
+  <div class="greeting__container">
+    <div class="greeting__left">
+      <div class="greeting__text--first">
+        Good morning, <span class = "greeting__name"> Josh </span>
       </div>
-      <div class="header__cards">
-        <div class="header__text">
-          CUSTOMER INTERACTIONS
-        </div>
-        <div class="header__num">
-          27
-        </div>
-      </div>
-      <div class="header__cards">
-        <div class="header__text">
-          CLIENTS
-        </div>
-        <div class="header__num">
-          22
-        </div>
+      <div class="greeting__text--second">
+        You have <span class = "greeting__notif"> 10 </span> new notifications.
       </div>
     </div>
-    <div class="index__notifications__container">
-      <div class="heading">
-        Notifications
+    <div class="greeting__right">
+
+    </div>
+  </div>
+  <div class="index__row">
+    <div class="index__left__container">
+      <div class="index__card__title">
+        CLIENTS
       </div>
-      <div class="notif__card">
-        <div class="notif__icon">
-          <i class="fas fa-user-friends"></i>
-        </div>
-        <div class="notif__content">
-          You have three new client requests
-        </div>
-        <div class="notif__time">
-          VIEW
-        </div>
+
+    </div>
+    <div class="index__right__container">
+      <div class="index__card__title">
+        CALENDAR
       </div>
     </div>
   </div>
+  <div class="index__row row__bottom center__flex">
+    <div class="index__container--card">
+      <div class="index__card__title">
+        CALENDAR
+      </div>
+    </div>
+    <div class="index__spacer">
+
+    </div>
+    <div class="index__container--card">
+      <div class="index__card__title">
+        CALENDAR
+      </div>
+    </div>
+    <div class="index__spacer">
+
+    </div>
+    <div class="index__container--card">
+      <div class="index__card__title">
+        CLASSES
+      </div>
+    </div>
+
+  </div>
+  <!-- <div class="page__title">
+  Dashboard
+</div> -->
+<!-- <div class="header__container">
+  <div class="row page__headers">
+    <div class="col-3 header__cards card__bg rfont">
+      <div class="cards__text rfont">
+        RATING
+      </div>
+      <div class="header__num">7.8</div>
+    </div>
+    <div class="col-6 header__cards">
+      <div class="cards__text">
+        CLIENT INTERACTIONS
+      </div>
+      <div class="header__num">
+        27
+      </div>
+    </div>
+    <div class="col-3 header__cards">
+      <div class="cards__text">
+        CLIENTS
+      </div>
+      <div class="header__num">
+        22
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="index__notifications__container">
+  <div class="heading">
+    Notifications
+  </div>
+  <div class="notif__card">
+    <div class="notif__icon">
+      <i class="fas fa-user-friends"></i>
+    </div>
+    <div class="notif__content">
+      You have three new client requests
+    </div>
+    <div class="notif__time">
+      VIEW
+    </div>
+  </div>
+</div> -->
+</div>
 </body>
