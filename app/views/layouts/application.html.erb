@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Fitrak</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -17,7 +19,7 @@
         <img src="/assets/whitelogo.png" height="50" alt="">
       </a>
     </nav> -->
-    <div class="sidebar rfont">
+    <!-- <div class="sidebar rfont">
       <div class="nav-logo">
       </div>
       <div class="side__profile__card centered">
@@ -74,7 +76,13 @@
         </div>
       </div>
       </a>
-    </div>
+    </div> -->
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <%= yield %>
 
   </body>
