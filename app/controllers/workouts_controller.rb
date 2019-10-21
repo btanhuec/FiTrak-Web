@@ -27,7 +27,7 @@ class WorkoutsController < ApplicationController
   # POST /workouts.json
   def create
 
-    @workout = Workout.new
+    @workout = Workout.new(workout_params)
     @workout.user_id = current_user.id
 
     respond_to do |format|
@@ -73,6 +73,6 @@ class WorkoutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def workout_params
-      params.require(:workout).permit(:name, :description)
+      params.require(:workout).permit(:name, :description, :user_id)
     end
 end

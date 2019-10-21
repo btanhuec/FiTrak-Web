@@ -9,6 +9,6 @@
   <strong>Description:</strong>
   <%= @workout.description %>
 </p>
-
+<%= link_to 'Add Excercise', new_excercise_path(workout_id: @workout.id)%>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
