@@ -1,3 +1,70 @@
 // Place all the styles related to the Workouts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.workouts__title{
+  width:100%;
+  height:7vh;
+  color:#eb4034;
+  text-align:center;
+  font-size:5vh;
+}
+
+.workouts__container{
+  padding-left:5%;
+  padding-right:5%;
+  // background-color:black;
+}
+
+.row--workouts{
+  height:22vh;
+}
+
+.font--white{
+  color:white;
+}
+
+.workout__card{
+  background-color: #eb4034;
+  height:20vh;
+  width:100%;
+  padding:10px;
+  border-radius:5px;
+  transition-property:color;
+
+  color:white;
+  -webkit-transition: all ease 0.8s;
+-moz-transition: all ease 0.8s;
+transition: all ease 0.8s;
+border-style:solid;
+border-color:#eb4034;
+border-radius:thin;
+}
+
+.workout__card:hover{
+
+  background-color:white;
+  color:black;
+}
+
+.workout__card--left{
+  float:left;
+  width:40%;
+  font-size:40px;
+}
+
+.workout__card--right{
+  float:right;
+  width:60%;
+  height:100%;
+  background-color:white;
+  border-radius:10px;
+  padding:10px;
+}
+
+.workout__card--right--text{
+  color: black;
+}
+
+.workout__card--right:hover{
+  background-color:none;
+}

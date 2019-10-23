@@ -25,6 +25,14 @@
    font-family: 'Abel', sans-serif;
  }
 
+ .sfont{
+   font-family: 'Share Tech', sans-serif;
+ }
+
+ .lfont{
+   font-family: 'Lato', sans-serif;
+ }
+
 .sidebar{
   float:left;
   background-color:white;
@@ -173,8 +181,14 @@
 
 .navbar{
   background-color:white;
+  border-bottom-style:solid;
+
 }
 
 .nav__img{
   height:4vh;
+}
+
+.nav-link{
+
 }
