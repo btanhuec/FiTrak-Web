@@ -1,7 +1,7 @@
 
 <body>
   <div class = "workouts__title sfont">
-    WORKOUTS
+    MY WORKOUTS
   </div>
 
   <div class="workouts__container">
@@ -16,7 +16,14 @@
           <div class="workout__card--right lfont">
             <div class="workout__card--right--text">
               <%= workout.description %>
+
             </div>
+            <div class="right__icons">
+              <%= link_to '<i class="far fa-eye"></i>'.html_safe, workout %>
+              <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe, edit_workout_path(workout) %>
+              <%= link_to '<i class="fas fa-minus-square"></i>'.html_safe, workout, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+
           </div>
 
         </div>

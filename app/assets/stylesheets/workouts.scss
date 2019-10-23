@@ -43,13 +43,16 @@ border-radius:thin;
 .workout__card:hover{
 
   background-color:white;
-  color:black;
+  // color:black;
 }
 
+
 .workout__card--left{
+  color:black;
   float:left;
   width:40%;
-  font-size:40px;
+  font-size:2.0vw;
+  text-align:center;
 }
 
 .workout__card--right{
@@ -64,8 +67,22 @@ border-radius:thin;
 .workout__card--right--text{
   color: black;
   font-size:15px;
+  height:60%;
 }
 
 .workout__card--right:hover{
   background-color:none;
+}
+
+.workout__card:hover #workout__card--left{
+  display:none;
+}
+
+.right__icons{
+  width:100%;
+  display:table-cell;
+  vertical-align:bottom;
+  text-align:center;
+  font-size:2vw;
+  color: black;
 }
