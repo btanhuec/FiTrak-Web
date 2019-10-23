@@ -16,20 +16,37 @@
   </head>
 
   <body>
-    <nav class = "navbar navbar-sz">
+    <nav class = "navbar">
       <div class="nav-logo">
         <img src="/assets/redfitrak.png" alt="" class ="nav__img">
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="nav-link">
-        <%= link_to 'HOME', pages_path %>
-      </div>
-      <div class="nav-link">
-        <%= link_to 'WORKOUTS', workouts_path %>
+
+      <div class="d-flex justify-content-left">
+        <div class="nav-link">
+          <%= link_to 'HOME', pages_path %>
+        </div>
+
+        <div class="nav-link">
+          <%= link_to 'WORKOUTS', workouts_path %>
+        </div>
+        <fieldset class="border">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            MENU
+          </a>
+          
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">My Account</a>
+          </div>
+        </div>
+        </fieldset>
       </div>
     </nav>
+
+
     <!-- <nav class="sidebar-nav navbar-purple">
       <a class="navbar-brand nav-logo" href="#">
         <img src="/assets/whitelogo.png" height="50" alt="">
