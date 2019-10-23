@@ -12,8 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require hover
  */
  @import "bootstrap";
+ @import 'hover';
 
  .rfont{
    font-family: 'Poppins', sans-serif;
@@ -26,7 +28,7 @@
 .sidebar{
   float:left;
   background-color:white;
-  height:100vh;
+  height:7vh;
   width:200px;
   color:#292F36;
   padding-top:10px;
@@ -35,23 +37,24 @@
   border-color:#7678ED;
 }
 
-.navbar-purple{
-  height:50px;
+.navbar-sz{
+  height:100px;
   width:100%;
+  vertical-align:middle;
 }
 .nav-logo{
-  background: url(/assets/coloredlogo.png);
+  // background: url(/assets/redfitrak.png);
   background-repeat:no-repeat;
   background-size: contain;
   background-position:center;
-  height:4vh;
-  border-style:none;
-  border-color:white;
-  margin-left:10px;
-  margin-right:10px;
-  padding-top:10px;
-  padding-bottom:10px;
-  border-radius:15px;
+  height:5vh;
+  // border-style:none;
+  // border-color:white;
+  // margin-left:10px;
+  // margin-right:10px;
+  // padding-top:10px;
+  // padding-bottom:10px;
+  // border-radius:15px;
 }
 
 .side__item{
@@ -166,4 +169,12 @@
 .devise__left__text{
   font-size:4vh;
 
+}
+
+.navbar{
+  background-color:white;
+}
+
+.nav__img{
+  height:4vh;
 }

@@ -4,7 +4,7 @@
   <head>
     <title>Fitrak</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,6 +14,17 @@
   </head>
 
   <body>
+    <nav class = "navbar navbar-sz">
+      <div class="nav-logo">
+        <img src="/assets/redfitrak.png" alt="" class ="nav__img">
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="nav-link">
+        <%= link_to 'HOME', pages_path %>
+      </div>
+    </nav>
     <!-- <nav class="sidebar-nav navbar-purple">
       <a class="navbar-brand nav-logo" href="#">
         <img src="/assets/whitelogo.png" height="50" alt="">

@@ -1,7 +1,63 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Workouts</h1>
 
+<div class="sidebar rfont">
+  <div class="nav-logo">
+  </div>
+  <div class="side__profile__card centered">
+    <div class="prof__img">
+      <img src="assets/profileplaceholder.png" style = 'object-fit:contain;' alt="">
+    </div>
+    <div class="prof__name--card">
+      <div class="prof__name rfont">
+        Welcome, <%= current_user.email %>
+      </div>
+    </div>
+  </div>
+  <a href = "#">
+  <div class="side__item side-sched__card">
+    <div class="side__icon">
+      <i class="far fa-calendar"></i>
+    </div>
+    <div class="side__text">
+      SCHEDULE
+    </div>
+  </div>
+  </a>
+  <a href="#">
+  <div class="side__item side-sched__card">
+    <div class="side__icon">
+      <i class="fas fa-user-friends"></i>
+    </div>
+
+    <div class="side__text">
+      CLIENTS
+    </div>
+  </div>
+  </a>
+  <a href="#">
+  <div class="side__item side-sched__card">
+    <div class="side__icon">
+      <i class="far fa-comments"></i>
+    </div>
+
+    <div class="side__text">
+      <%= link_to 'WORKOUTS', workouts_path %>
+
+    </div>
+
+  </div>
+  </a>
+  <a href="#">
+  <div class="side__item side-sched__card">
+    <div class="side__icon">
+      <i class="fas fa-cog"></i>
+    </div>
+    <div class="side__text">
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    </div>
+  </div>
+  </a>
+</div>
 <table>
   <thead>
     <tr>
