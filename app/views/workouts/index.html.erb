@@ -1,41 +1,39 @@
 
 <body>
-  <div class = "workouts__title sfont">
+  <div class = "workouts__title lfont">
     MY WORKOUTS
   </div>
 
-  <div class="workouts__container">
-    <% @workouts.each_slice(4) do |workouts| %>
-    <div class="row row--workouts">
-      <% workouts.each do |workout| %>
-      <div class="col-3">
-        <div class="workout__card">
-          <div class="workout__card--left sfont">
-            <%= workout.name%>
-          </div>
-          <div class="workout__card--right lfont">
-            <div class="workout__card--right--text">
-              <%= workout.description %>
-
-            </div>
-            <div class="right__icons">
-              <%= link_to '<i class="far fa-eye"></i>'.html_safe, workout %>
-              <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe, edit_workout_path(workout) %>
-              <%= link_to '<i class="fas fa-minus-square"></i>'.html_safe, workout, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </div>
-
-          </div>
-
-        </div>
-
+  <div class="workouts__container lfont">
+    <% @workouts.each do |workout| %>
+      <% workout.excercises.each do |excercise| %>
+        <span><%= excercise.title %></span>
+      <%end%>
+    <div class="workouts__wrap hvr-grow">
+      <div class="workouts__card --noborder">
+          <%= workout.name%>
       </div>
-      <% end %>
+      <div class="workouts__card">
+        <div class="workouts__left">
+          <%= workout.description %>
+        </div>
+        <div class="workouts__divider">
+          <div class="workouts__triangle">
+
+          </div>
+        </div>
+        <div class="workouts__right">
+
+          <div class="workouts__icons__row">
+            <%= link_to '<i class="far fa-eye"></i>'.html_safe, workout, :class => "icon_link" %><br>
+            <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe, edit_workout_path(workout), :class => "icon_link" %><br>
+            <%= link_to '<i class="fas fa-minus-square"></i>'.html_safe, workout, method: :delete, data: { confirm: 'Are you sure?' }, :class => "icon_link" %><br>
+          </div>
+        </div>
+      </div>
     </div>
+
     <% end %>
-
-    <div class="row">
-
-    </div>
   </div>
 
 
