@@ -45,7 +45,7 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    @profile.user_id = current_user.id
+    @profile = Profile.find(params[:id])
     @profile.email = current_user.email
     firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
     respond_to do |format|
