@@ -141,8 +141,8 @@ vertical-align: bottom;
   float:right;
   width: 0;
 height: 0;
-border-bottom: 15vh solid #4e5a65;
-border-left: 15vh solid transparent;
+border-bottom: 14.5vh solid #4e5a65;
+border-left: 14.5vh solid transparent;
 }
 .workouts__right{
   border-top-right-radius:10px;
@@ -178,4 +178,24 @@ color: #eb4034;
 a.icon_link:hover {
 color: #eb4034;
 background-color:transparent;
+}
+
+.workouts__right__title{
+  font-size:20px;
+  color:white;
+
+}
+
+.workouts__excercises__card{
+  width:50%;
+  float:left;
+}
+
+.excercise__content{
+  color:white;
+  font-size:2vh;
+}
+.excercise__content--title{
+  color:white;
+  font-size:20px;
 }
