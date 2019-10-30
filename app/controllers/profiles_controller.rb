@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-
+  @base_uri = 'https://fitrak-a97c2.firebaseio.com/'
   # GET /profiles
   # GET /profiles.json
   def index
@@ -29,11 +29,12 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.email = current_user.email
-
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/')
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
+        response = firebase.push("trainers", { :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
       else
         format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
@@ -46,10 +47,12 @@ class ProfilesController < ApplicationController
   def update
     @profile.user_id = current_user.id
     @profile.email = current_user.email
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/')
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
+        response = firebase.update("trainers", { :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
       else
         format.html { render :edit }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
@@ -75,6 +78,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :first_name, :last_name, :about_me, :age, :gender, :experience)
+      params.require(:profile).permit(:user_id, :first_name, :last_name, :about_me, :age, :gender, :experience, :email)
     end
 end
