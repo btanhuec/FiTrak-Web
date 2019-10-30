@@ -1,3 +1,36 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.myprofile__card{
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:10px;
+  margin-bottom:10px;
+  height:80vh;
+}
+.myprofile__title{
+  font-size:3vh;
+  width:50%;
+}
+
+.myprofile__about_me{
+  font-size:3vh;
+  width:50%;
+}
+
+.myprofile__age{
+  font-size:3vh;
+  width:50%;
+}
+
+.myprofile__field__container{
+  font-size:3vh;
+  width:50%;
+}
+
+.myprofile__field{
+  float:left;
+  margin-right:20px;
+  font-weight:bold;
+}

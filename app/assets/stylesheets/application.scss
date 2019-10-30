@@ -16,7 +16,14 @@
  */
  @import "bootstrap";
  @import 'hover';
-
+// body{
+//   background-color:#eb4034;
+//   background-size:30vh;
+// }
+body {
+  background-image: linear-gradient(#eb4034 50%, #ffffff 0%);
+  min-height: 100vh;
+}
  .rfont{
    font-family: 'Poppins', sans-serif;
  }
@@ -31,6 +38,10 @@
 
  .lfont{
    font-family: 'Lato', sans-serif;
+ }
+
+ .rfont{
+
  }
 
 .sidebar{
@@ -180,7 +191,7 @@
 }
 
 .navbar{
-  background-color:#4e5a65;
+  background-color:white;
 
 }
 
@@ -190,4 +201,11 @@
 
 .nav-link{
 
+}
+
+.overlay-light{
+  // background-color:rgba(255,255,255,0.16);
+  background-color:white;
+  border-radius:20px;
+    padding:20px;
 }
