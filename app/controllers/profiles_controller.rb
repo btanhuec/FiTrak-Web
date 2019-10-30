@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
-        response = firebase.push("trainers", { :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        response = firebase.push("trainers", {:email=> @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
       else
         format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
@@ -52,7 +52,7 @@ class ProfilesController < ApplicationController
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
-        response = firebase.update("trainers", { :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        response = firebase.update("trainers", {:email => @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
       else
         format.html { render :edit }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
