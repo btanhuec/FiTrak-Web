@@ -26,30 +26,34 @@
 }
 
 .myprofile__field__container{
-  font-size:3vh;
-  width:50%;
+  font-size:2.5vh;
+  width:100%;
+  text-align:center;
 }
 
 .myprofile__field{
   float:left;
+  width:100%;
+  text-align:center;
   margin-right:20px;
   font-weight:bold;
 }
 
 .myprofile__card__edit{
-  font-size:50px;
+  font-size:20px;
   margin-left:10px;
   color:black;
+  border-radius:10px;
 }
 
 .circle__edit {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 5vw;
   background-color: white;
   border-radius: 50%;
   position:absolute;
-  left:-50px;
-  top:-50px;
+  left:-25px;
+  top:-25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +63,8 @@
   height:10vh;
   width:100%;
   text-align:center;
+  margin-bottom:5vh;
+  color:white;
 }
 
 .header__title{

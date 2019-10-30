@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <%= current_user.email%>
-<div class="myprofile__card overlay-light lfont">
+<div class="myprofile__card overlay-light afont">
   <% @profiles.each do |profile| %>
     <% if (profile.user_id == current_user.id) %>
-    <div class="circle__edit">
       <div class="myprofile__card__edit">
-        <%= link_to '<i class="fas fa-user-edit"></i>'.html_safe, edit_profile_path(profile) %>
+        <%= link_to '<i class="fas fa-user-edit"></i> Edit Profile'.html_safe, edit_profile_path(profile) %>
       </div>
-    </div>
     <div class="profile__header">
       <div class="header__title">
         Your Profile Page
@@ -17,14 +15,14 @@
         This will be the information potential clients will see!
       </div>
     </div>
-    <div class="myprofile__title">
+    <div class="myprofile__field__container">
       <div class="myprofile__field">
         Name:
       </div>
       <%= profile.first_name %>
       <%= profile.last_name %>
     </div>
-    <div class="myprofile__title">
+    <div class="myprofile__field__container">
       <div class="myprofile__field">
         Email:
       </div>
