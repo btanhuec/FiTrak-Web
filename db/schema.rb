@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_30_025915) do
+ActiveRecord::Schema.define(version: 2019_10_30_041316) do
 
   create_table "excercises", force: :cascade do |t|
     t.string "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_10_30_025915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "experience"
+    t.string "email"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

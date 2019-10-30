@@ -8,6 +8,7 @@
   margin-top:10px;
   margin-bottom:10px;
   height:80vh;
+  position:relative;
 }
 .myprofile__title{
   font-size:3vh;
@@ -33,4 +34,37 @@
   float:left;
   margin-right:20px;
   font-weight:bold;
+}
+
+.myprofile__card__edit{
+  font-size:50px;
+  margin-left:10px;
+  color:black;
+}
+
+.circle__edit {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 50%;
+  position:absolute;
+  left:-50px;
+  top:-50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__header{
+  height:10vh;
+  width:100%;
+  text-align:center;
+}
+
+.header__title{
+  font-size:5vh;
+}
+
+.header__subtitle{
+  font-size:2vh;
 }
