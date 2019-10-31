@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.email = current_user.email
-    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINER')
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
     @passEmail = current_user.email
     respond_to do |format|
       if @profile.save
@@ -50,7 +50,7 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     @profile.email = current_user.email
-    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINER')
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
