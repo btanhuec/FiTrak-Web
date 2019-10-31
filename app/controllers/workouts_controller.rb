@@ -29,11 +29,13 @@ class WorkoutsController < ApplicationController
 
     @workout = Workout.new(workout_params)
     @workout.user_id = current_user.id
-
+    @username = current_user.email.split("@").first
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/WORKOUTS')
     respond_to do |format|
       if @workout.save
         format.html { redirect_to @workout, notice: 'Workout was successfully created.' }
         format.json { render :show, status: :created, location: @workout }
+        @response = firebase.set(@workout.name, {:username => @username, :name => @workout.name, :description => @workout.description, :user_id => @workout.user_id})
       else
         format.html { render :new }
         format.json { render json: @workout.errors, status: :unprocessable_entity }

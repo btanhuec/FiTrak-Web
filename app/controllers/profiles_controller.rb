@@ -29,12 +29,15 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.email = current_user.email
-    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINER')
+    @passEmail = current_user.email
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
         format.json { render :show, status: :created, location: @profile }
-        response = firebase.push("trainers", {:email=> @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        @response = firebase.set(@profile.username, { :email=> @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        # @response = firebase.set(@profile.user_id, { :email=> @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        puts response
       else
         format.html { render :new }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
@@ -47,12 +50,12 @@ class ProfilesController < ApplicationController
   def update
     @profile = Profile.find(params[:id])
     @profile.email = current_user.email
-    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINER')
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
-        response = firebase.update("trainers", {:email => @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
+        firebase.update(@profile.username, {:email => @profile.email, :first_name => @profile.first_name, :last_name => @profile.last_name, :about_me => @profile.about_me, :age => @profile.age, :gender => @profile.gender, :experience => @profile.experience})
       else
         format.html { render :edit }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
@@ -78,6 +81,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :first_name, :last_name, :about_me, :age, :gender, :experience, :email)
+      params.require(:profile).permit(:username, :user_id, :first_name, :last_name, :about_me, :age, :gender, :experience, :email)
     end
 end

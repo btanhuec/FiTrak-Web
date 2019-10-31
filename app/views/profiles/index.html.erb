@@ -17,6 +17,12 @@
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
+        Username:
+      </div>
+      <%= profile.username %>
+    </div>
+    <div class="myprofile__field__container">
+      <div class="myprofile__field">
         Name:
       </div>
       <%= profile.first_name %>
@@ -52,6 +58,7 @@
       </div>
       <%= profile.about_me %>
     </div>
+    <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   <% end %>
 </div>
