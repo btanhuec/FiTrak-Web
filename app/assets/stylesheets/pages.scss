@@ -20,6 +20,71 @@
   // width:100%;
 }
 
+.index__background{
+  background-color: #000000;
+  height:93vh;
+  width:100%;
+}
+
+.index__container{
+  height:80vh;
+  width:100%;
+}
+.index_square{
+  background-color:black;
+  margin-left:25%;
+  margin-right:25%;
+  margin-top:10vh;
+  margin-bottom:10vh;
+  height:60vh;
+  width:50%;
+}
+
+.inner_square{
+  width:45%;
+  height:45%;
+  border-radius:5px;
+  border-style:solid;
+  border-width:thin;
+  border-color:white;
+}
+
+.workout__img{
+  background-image:url(/assets/workouts-menu.svg);
+  background-size: cover;
+}
+
+.clients__img{
+  background-image:url(/assets/clients-menu.svg);
+  background-size: cover;
+}
+
+.--top{
+  margin-bottom:10vh;
+}
+
+.--left{
+  float:left;
+}
+
+.--right{
+  float:right;
+}
+
+.--black{
+  background-color:black;
+}
+
+.--red{
+  background-color: #eb4034 ;
+}
+
+.index__title{
+  color:white;
+  text-align:center;
+  font-size:5rem;
+}
+
 .page__title{
   font-size:40pt;
   color:white;

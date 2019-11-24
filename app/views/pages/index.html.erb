@@ -25,150 +25,26 @@
 <head>
 
 </head>
-<body>
-  <!-- <div class="index__bg">
-</div> -->
-<!-- <div class="sidebar rfont">
-  <div class="nav-logo">
-  </div>
-  <div class="side__profile__card centered">
-    <div class="prof__img">
-      <img src="assets/profileplaceholder.png" style = 'object-fit:contain;' alt="">
+<body style = "background-color: #000000;">
+  <div class = "index__container">
+    <div class = "index__title rfont">
+      <span>DASHBOARD</span>
     </div>
-    <div class="prof__name--card">
-      <div class="prof__name rfont">
-        Welcome, <%= current_user.email %>
-      </div>
-    </div>
-  </div>
-  <a href = "#">
-  <div class="side__item side-sched__card">
-    <div class="side__icon">
-      <i class="far fa-calendar"></i>
-    </div>
-    <div class="side__text">
-      SCHEDULE
-    </div>
-  </div>
-  </a>
-  <a href="#">
-  <div class="side__item side-sched__card">
-    <div class="side__icon">
-      <i class="fas fa-user-friends"></i>
-    </div>
+      <div class = "index_square">
+        <%= link_to workouts_path do %>
+        <div class = "inner_square --left --black --top hvr-grow workout__img">
 
-    <div class="side__text">
-      CLIENTS
-    </div>
-  </div>
-  </a>
-  <a href="#">
-  <div class="side__item side-sched__card">
-    <div class="side__icon">
-      <i class="far fa-comments"></i>
-    </div>
+        </div>
+        <% end %>
+        <div class = "inner_square --right --red --top hvr-grow clients__img">
 
-    <div class="side__text">
-      <%= link_to 'WORKOUTS', workouts_path %>
+        </div>
+        <div class = "inner_square --left --red hvr-grow">
 
-    </div>
+        </div>
+        <div class = "inner_square --right --black hvr-grow">
 
+        </div>
+      </div>
   </div>
-  </a>
-  <a href="#">
-  <div class="side__item side-sched__card">
-    <div class="side__icon">
-      <i class="fas fa-cog"></i>
-    </div>
-    <div class="side__text">
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-    </div>
-  </div>
-  </a>
-</div> -->
-<div class="index__wrapper rfont">
-  <div class="index__row">
-    <div class="index__left__container ">
-      <div class="index__card__title">
-        CLIENTS
-      </div>
-
-    </div>
-    <div class="index__right__container">
-      <div class="index__card__title">
-        CALENDAR
-      </div>
-    </div>
-  </div>
-  <div class="index__row row__bottom center__flex">
-    <div class="index__container--card">
-      <div class="index__card__title">
-        CALENDAR
-      </div>
-    </div>
-    <div class="index__spacer">
-
-    </div>
-    <div class="index__container--card">
-      <div class="index__card__title">
-        CALENDAR
-      </div>
-    </div>
-    <div class="index__spacer">
-
-    </div>
-    <div class="index__container--card">
-      <div class="index__card__title">
-        CLASSES
-      </div>
-    </div>
-
-  </div>
-  <!-- <div class="page__title">
-  Dashboard
-</div> -->
-<!-- <div class="header__container">
-  <div class="row page__headers">
-    <div class="col-3 header__cards card__bg rfont">
-      <div class="cards__text rfont">
-        RATING
-      </div>
-      <div class="header__num">7.8</div>
-    </div>
-    <div class="col-6 header__cards">
-      <div class="cards__text">
-        CLIENT INTERACTIONS
-      </div>
-      <div class="header__num">
-        27
-      </div>
-    </div>
-    <div class="col-3 header__cards">
-      <div class="cards__text">
-        CLIENTS
-      </div>
-      <div class="header__num">
-        22
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="index__notifications__container">
-  <div class="heading">
-    Notifications
-  </div>
-  <div class="notif__card">
-    <div class="notif__icon">
-      <i class="fas fa-user-friends"></i>
-    </div>
-    <div class="notif__content">
-      You have three new client requests
-    </div>
-    <div class="notif__time">
-      VIEW
-    </div>
-  </div>
-</div> -->
-</div>
 </body>
