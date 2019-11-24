@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="874" height="594" viewBox="0 0 874 594">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="874" height="594"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="874" height="594" fill="#fff"/>
+    <g id="Group_2" data-name="Group 2">
+      <g id="Group_1" data-name="Group 1" transform="translate(-278 -217.957)">
+        <rect id="Rectangle_1" data-name="Rectangle 1" width="879" height="596" transform="translate(275 215.957)"/>
+        <g id="noun_Gym_2992755" transform="translate(453.39 436.792)">
+          <path id="Path_1" data-name="Path 1" d="M9.768,184.183H16.7c.433,0,.867.887.867,1.775v68.318c0,8.872,3.467,15.083,7.368,15.083H46.61c4.334,0,7.368-7.1,7.368-15.083V51.983c0-8.872-3.467-15.083-7.368-15.083H24.938C20.6,36.9,17.57,44,17.57,51.983V120.3c0,.887-.433,1.775-.867,1.775H9.768c-2.6,0-4.768,4.436-4.768,9.76V175.31C5,179.747,7.167,184.183,9.768,184.183Z" transform="translate(-5 -5.9)" fill="#fff"/>
+          <path id="Path_2" data-name="Path 2" d="M133.137,122.365h-7.755c-.485,0-.969-.89-.969-1.781V52.034c0-8.9-3.877-15.134-8.24-15.134H91.94c-4.847,0-8.24,7.122-8.24,15.134V254.124c0,8.9,3.877,15.134,8.24,15.134h24.234c4.847,0,8.24-7.122,8.24-15.134v-68.55c0-.89.485-1.781.969-1.781h7.755c2.908,0,5.331-4.451,5.331-9.793V130.378C138.469,126.816,136.045,122.365,133.137,122.365Z" transform="translate(502.908 -5.9)" fill="#fff"/>
+          <path id="Path_3" data-name="Path 3" d="M514.541,307.442V44.22c0-8.356-8.091-15.32-17.8-15.32H422.309c-9.709,0-17.8,6.964-17.8,15.32V147.28H129.431V44.22c0-8.356-8.091-15.32-17.8-15.32H37.2c-9.709,0-17.8,6.964-17.8,15.32V308.139c0,8.356,8.091,15.32,17.8,15.32h74.433c9.709,0,17.8-6.964,17.8-15.32V205.078H404.51V308.139c0,8.356,8.091,15.32,17.8,15.32h74.433C507.26,322.762,514.541,315.8,514.541,307.442Z" transform="translate(47.723 -28.9)" fill="#fff"/>
+        </g>
+        <path id="Path_4" data-name="Path 4" d="M190.748-210.343l31.428-67.4,793.67,370.095-205.378,96.1L280.876-58.5-32.443,268.291,134.088-88.835Z" transform="translate(192.953 560.555) rotate(-25)" fill="#fff"/>
+        <text id="WORKOUTS" transform="translate(405.136 340.008)" font-size="116" font-family="Roboto-Light, Roboto" font-weight="300"><tspan x="0" y="0">WORKOUTS</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
