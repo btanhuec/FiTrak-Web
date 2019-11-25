@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Clients</h1>
 <head>
   <% @firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')%>
   <% @username = current_user.email.split("@").first %>
@@ -8,7 +7,10 @@
   <% @response = @firebase.get(@link) %>
   <% @clients_arr = @response.body %>
 </head>
-<body>
+<body style = "background-image: url(/assets/clients-bg.svg); background-size: cover;">
+  <div class = "index__title">
+    <span class = index__heading>CLIENTS</span>
+  </div>
   <div class = "client_cards_container">
       <% @clients_arr.each_slice(3) do |slice| %>  
       <div class="row client_row_padding">
@@ -39,11 +41,6 @@
       <% end %>
   </div>
     
-        
-  <% @clients_arr.each do |c| %>
-    <br>
-    <%= c %>
-  <% end %>
 </body>
 <!-- <table>
   <thead>
