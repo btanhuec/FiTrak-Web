@@ -16,11 +16,13 @@
       <div class="row client_row_padding">
           <% slice.each do |c| %>
           <div class="col-sm-3 hvr-grow">
+            <%= link_to client_path(c) do%>
               <div class="client_card">
                 <div class = "">
                   <span class = "client_name rfont"><%= c %></span>
                 </div>
               </div>
+            <% end %>
           </div>
           <!-- <div class="col-sm-4">
               <div class="card">

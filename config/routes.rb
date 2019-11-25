@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :workouts
   devise_for :users
   resources :pages
-
+  
   devise_scope :user do
     authenticated :user do
       root 'pages#index', as: :authenticated_root
