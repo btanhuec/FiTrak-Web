@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
-
+  attr_reader :firebase
   # GET /workouts
   # GET /workouts.json
   def index

@@ -27,8 +27,10 @@
 </head>
 <body style = "background-color: #000000;">
   <div class = "index__container">
-    <div class = "index__title rfont">
-      <span>DASHBOARD</span>
+    <div class = "index__title">
+      <span class = "rfont index__heading">Dashboard</span>
+      <br>
+      <span class = "rfont index__greeting"> Welcome, <%= current_user.email %></span>
     </div>
       <div class = "index_square">
         <%= link_to workouts_path do %>
@@ -36,13 +38,15 @@
 
         </div>
         <% end %>
+        <%= link_to clients_path do %>
         <div class = "inner_square --right --red --top hvr-grow clients__img">
 
         </div>
-        <div class = "inner_square --left --red hvr-grow">
+        <% end %>
+        <div class = "inner_square --left --red hvr-grow settings__img">
 
         </div>
-        <div class = "inner_square --right --black hvr-grow">
+        <div class = "inner_square --right --black hvr-grow schedule__img">
 
         </div>
       </div>

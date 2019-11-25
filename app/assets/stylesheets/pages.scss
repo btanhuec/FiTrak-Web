@@ -34,7 +34,7 @@
   background-color:black;
   margin-left:25%;
   margin-right:25%;
-  margin-top:10vh;
+  margin-top:5vh;
   margin-bottom:10vh;
   height:60vh;
   width:50%;
@@ -57,6 +57,16 @@
 .clients__img{
   background-image:url(/assets/clients-menu.svg);
   background-size: cover;
+}
+
+.settings__img{
+  background-image:url(/assets/settings-menu.svg);
+  background-size:cover;
+}
+
+.schedule__img{
+  background-image:url(/assets/appointments-menu.svg);
+  background-size:cover;
 }
 
 .--top{
@@ -82,7 +92,17 @@
 .index__title{
   color:white;
   text-align:center;
+
+}
+
+.index__heading{
   font-size:5rem;
+  font-weight:300;
+}
+
+.index__greeting{
+  font-size:1.5rem;
+  font-weight:200;
 }
 
 .page__title{

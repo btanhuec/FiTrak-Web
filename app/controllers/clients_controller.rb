@@ -11,7 +11,11 @@ class ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
-    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
+    @firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')
+    @username = current_user.email.split("@").first
+    @link = @username + "/clients"
+    @response = @firebase.get(@link)
+    # @client_arr = @response.get('clients')
     @profile.user_id = current_user.id
     @profile.email = current_user.email
 

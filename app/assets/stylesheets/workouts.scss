@@ -12,7 +12,10 @@ body{
   text-align:center;
   font-size:5vh;
 }
-
+.workout_card_bg{
+  background-image:url(/assets/workout-element.svg);
+  background-size:cover;
+}
 .workouts__container{
   padding-left:10%;
   padding-right:10%;
