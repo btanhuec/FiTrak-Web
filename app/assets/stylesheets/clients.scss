@@ -9,11 +9,13 @@
 
 .client_row_padding{
     margin-bottom:5vh;
+    height:10vh;
 }
 
 .client_name{
     font-size:1.5rem;
-
+    margin-left:5%;
+    margin-right:5%;
 }
 
 .index__title{
@@ -26,3 +28,11 @@
     font-size:5rem;
     font-weight:300;
   }
+
+.client_card{
+    height:10vh;
+    border-radius:20px;
+    background-color:gray;
+    color:white;
+
+}

@@ -12,12 +12,12 @@
     <span class = index__heading>CLIENTS</span>
   </div>
   <div class = "client_cards_container">
-      <% @clients_arr.each_slice(3) do |slice| %>  
+      <% @clients_arr.each_slice(4) do |slice| %>  
       <div class="row client_row_padding">
           <% slice.each do |c| %>
-          <div class="col-sm-4 hvr-grow">
-              <div class="card">
-                <div class = "card-header text-center">
+          <div class="col-sm-3 hvr-grow">
+              <div class="client_card">
+                <div class = "">
                   <span class = "client_name rfont"><%= c %></span>
                 </div>
               </div>
