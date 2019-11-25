@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <rect width="1920" height="1080"/>
+    <g id="Group_10" data-name="Group 10" transform="translate(243 -135)">
+      <g id="noun_Arrow_2428799" transform="translate(1674.788 485.082) rotate(45)">
+        <g id="Group_9" data-name="Group 9" transform="translate(2.101 2.101)">
+          <path id="Path_34" data-name="Path 34" d="M179.244,221.156,2.1,45.906,46.379,2.1,223.521,177.352Zm44.278,87.61L46.379,133.547,2.1,177.352l177.143,175.22Zm0,131.446L46.379,264.961,2.1,308.766,179.244,484.017Zm0,131.415L46.379,396.407,2.1,440.212,179.244,615.431ZM356.355,177.352,179.244,2.1l-44.278,43.8L312.077,221.156Zm132.833,0L312.077,2.1,267.8,45.906,444.91,221.156Zm132.865,0L444.91,2.1l-44.278,43.8L577.775,221.156Z" transform="translate(-2.101 -2.101)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
