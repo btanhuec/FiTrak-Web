@@ -3,6 +3,7 @@
 <head>
   <% @firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')%>
   <% @username = current_user.email.split("@").first %>
+  <% @email_tag = current_user.email.split("@").second %>
   <% @link = @username + "/clients" %> 
   <% @response = @firebase.get(@link) %>
   <% @clients_arr = @response.body %>
@@ -16,13 +17,24 @@
       <div class="row client_row_padding">
           <% slice.each do |c| %>
           <div class="col-sm-3 hvr-grow">
-            <%= link_to client_path(c) do%>
+            <% if Client.where(:username => c).present? %>
+              <% cur_client = Client.where(:username => c)%> 
+              <%= link_to 'Show4', client_path(cur_client.ids) %>
+            <% else %>
+              <%= link_to 'Show', 
+              {:controller => "clients", 
+              :action => "create", 
+              :username => c, 
+              :user_id => current_user.id,
+              :email => c + "@" + @email_tag},
+              :method => "post" %>
+            <% end %>
               <div class="client_card">
                 <div class = "">
                   <span class = "client_name rfont"><%= c %></span>
                 </div>
               </div>
-            <% end %>
+
           </div>
           <!-- <div class="col-sm-4">
               <div class="card">
