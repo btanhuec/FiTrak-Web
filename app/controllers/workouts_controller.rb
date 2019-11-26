@@ -6,7 +6,9 @@ class WorkoutsController < ApplicationController
   def index
     @workouts = Workout.all
   end
+  def client_page
 
+  end
   # GET /workouts/1
   # GET /workouts/1.json
   def show
