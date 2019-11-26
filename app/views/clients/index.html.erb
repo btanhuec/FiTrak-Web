@@ -2,12 +2,15 @@
 
 <head>
   <% @firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/TRAINERS')%>
+  <% @firebaseC = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/CLIENTS')%>
+
   <% @username = current_user.email.split("@").first %>
   <% @email_tag = current_user.email.split("@").second %>
   <% @link = @username + "/clients" %> 
   <% @response = @firebase.get(@link) %>
   <% @clients_arr = @response.body %>
 </head>
+
 <body style = "background-image: url(/assets/clients-bg.svg); background-size: cover;">
   <div class = "index__title">
     <span class = index__heading>CLIENTS</span>
@@ -32,24 +35,12 @@
               <div class="client_card">
                 <div class = "">
                   <span class = "client_name rfont"><%= c %></span>
+                  <%= link_to '<i class="far fa-eye client_icon"></i>'.html_safe%><br>
                 </div>
               </div>
 
           </div>
-          <!-- <div class="col-sm-4">
-              <div class="card">
-                  <div class = "card-header text-center">
-                      CLIENT 2 EXAMPLE
-                    </div>
-              </div>
-          </div>
-          <div class="col-sm-4">
-              <div class="card">
-                  <div class = "card-header text-center">
-                      CLIENT 3 EXAMPLE
-                    </div>
-              </div>
-          </div> -->
+          
           <% end %>
       </div>
       <% end %>
