@@ -70,7 +70,12 @@ border-radius:thin;
   border-radius:10px;
   padding:10px;
 }
-
+.card__bg{
+  background-image:url(/assets/workouts-card-bg.svg);
+  background-size:cover;
+  border-width:thin;
+  border-color:#7B7B7B;
+}
 .workout__card--right--text{
   color: black;
   font-size:15px;
@@ -97,7 +102,7 @@ border-radius:thin;
 .workouts__card{
   width:100%;
   height:15vh;
-  background-color:black;
+  // background-color:black;
   border-radius:10px;
   border-style:solid;
   z-index:1;
@@ -106,6 +111,7 @@ border-radius:thin;
 .workouts__wrap{
   width:100%;
   height:100%;
+ 
 }
 .--noborder{
   position:relative;
@@ -148,8 +154,8 @@ vertical-align: bottom;
   float:right;
   width: 0;
 height: 0;
-border-bottom: 14.8vh solid #4e5a65;
-border-left: 14.8vh solid transparent;
+// border-bottom: 14.8vh solid #4e5a65;
+// border-left: 14.8vh solid transparent;
 }
 .workouts__right{
   border-top-right-radius:10px;
@@ -157,7 +163,7 @@ border-left: 14.8vh solid transparent;
   float:left;
   width:40%;
   height:100%;
-  background-color:#4e5a65;
+  // background-color:#4e5a65;
   // border-right-style:inset;
   // border-top-style:inset;
   // border-bottom-style:inset;
@@ -214,4 +220,10 @@ background-color:transparent;
   margin-bottom: 20vh;
   margin-left: 30vw;
   margin-right: 30vw;
+}
+
+.workouts__assign__btn{
+  // width:10%;
+  // height:100%;
+  float:right;
 }

@@ -15,21 +15,31 @@
   <div class = "index__title rfont">
       <span class = index__heading><%= @response_fname.body %> <%= @response_lname.body %></span>
   </div>
-
   <div class = "indiv__information">
     <div class = "indiv__left rfont">
-      <h2 style = "color:#eb4034" > About Me</h2>
-        <div class = "indiv__field">
-            <span class = "indiv__type">Full Name: </span> <span><%= @response_fname.body %> <%= @response_lname.body %></span>
+        <div class = "info_wrapper">
+            <h2 style = "color:#eb4034" > About Me</h2>
+            <div class = "indiv__field">
+                <span class = "indiv__type">Full Name: </span> <span><%= @response_fname.body %> <%= @response_lname.body %></span>
+            </div>
+    
+            <div class = "indiv__field">
+                <span class = "indiv__type">Email: </span> <span><%= @response_email.body %></span>
+            </div>
+    
+            <div class = "indiv__field">
+                <span class = "indiv__type">Interests: </span> <span><%= @response_interests.body %></span>
+            </div>
         </div>
 
-        <div class = "indiv__field">
-            <span class = "indiv__type">Email: </span> <span><%= @response_email.body %></span>
+        <div class = "info_wrapper">
+            <h2 style = "color:#eb4034" > Workouts Currently Assigned: </h2>
+            <div class = "indiv__field">
+                <span class = "indiv__type">FILLER:</span>
+            </div>
         </div>
 
-        <div class = "indiv__field">
-            <span class = "indiv__type">Interests: </span> <span><%= @response_interests.body %></span>
-        </div>
+
     </div>
   </div>
 
