@@ -1,14 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @workout.name %>
-</p>
+<div class="card bg-secondary new_workout--card" style="margin: 20vh;">
+  <div class="row">
+    <h3 style="text-align: center;">
+      <strong>Workout:</strong>
+      <%= @workout.name %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @workout.description %>
-</p>
+      <strong>Description:</strong>
+      <%= @workout.description %>
+    </h3>
+  </div>
+
+  <div class="row">
+    <div class="col-5 excercise__content">
+      <span style="color: red">Exercise Name</span>
+    </div>
+    <div class="col-3 excercise__content">
+      <span style="color: red">Number of Sets</span>
+    </div>
+    <div class="col-3 excercise__content">
+      <span style="color: red">Number of Reps</span>
+    </div>
+  </div>
+
+  <% @workout.excercises.each do |excercise| %>
+    <div class="row">
+      <div class="col-5 excercise__content">
+        <span><%= excercise.title %></span>
+
+      </div>
+      <div class="col-3 excercise__content">
+        <span><%= excercise.sets %></span>
+      </div>
+      <div class="col-3 excercise__content">
+        <span><%= excercise.reps %></span>
+      </div>
+    </div>
+  <%end%>
+</div>
+
 <%= link_to 'Add Excercise', new_excercise_path(workout_id: @workout.id)%>
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
