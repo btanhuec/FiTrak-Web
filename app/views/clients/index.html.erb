@@ -16,22 +16,30 @@
       <% @clients_arr.each_slice(4) do |slice| %>  
       <div class="row client_row_padding">
           <% slice.each do |c| %>
-          <div class="col-sm-3 hvr-grow">
-            <% if Client.where(:username => c).present? %>
-              <% cur_client = Client.where(:username => c)%> 
-              <%= link_to 'Show4', client_path(cur_client.ids) %>
-            <% else %>
-              <%= link_to 'Show', 
-              {:controller => "clients", 
-              :action => "create", 
-              :username => c, 
-              :user_id => current_user.id,
-              :email => c + "@" + @email_tag},
-              :method => "post" %>
-            <% end %>
+          <div class="col-sm-3 hvr-float">
+            
               <div class="client_card">
                 <div class = "">
+
                   <span class = "client_name rfont"><%= c %></span>
+                  <div class = "client_show_button">
+                    <% if Client.where(:username => c).present? %>
+                      <% cur_client = Client.where(:username => c)%> 
+                      <%= link_to '', client_path(cur_client.ids), :class => 'client_show_button' %>
+                    <% else %>
+                      <%= link_to '', 
+                      {:controller => "clients", 
+                      :action => "create", 
+                      :username => c, 
+                      :user_id => current_user.id,
+                      :email => c + "@" + @email_tag},{
+                        :class => 'client_show_button',
+                        :method => "post" 
+                      }
+                      %>
+                    <% end %>
+                  </div>
+                  
                 </div>
               </div>
 
@@ -84,4 +92,4 @@
 
 <br> -->
 
-<%= link_to 'New Client', new_client_path %>
+<!-- <%= link_to 'New Client', new_client_path %> -->

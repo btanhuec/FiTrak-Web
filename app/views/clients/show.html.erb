@@ -1,19 +1,37 @@
 
+<head>
+  <% @firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/CLIENTS')%>
+  <% @link_email = @client.username + "/EMAIL" %> 
+  <% @link_fname = @client.username + "/FIRST_NAME" %> 
+  <% @link_lname = @client.username + "/LAST_NAME" %> 
+  <% @link_interests = @client.username + "/INTERESTS" %> 
+  <% @response_email = @firebase.get(@link_email) %>
+  <% @response_fname = @firebase.get(@link_fname) %>
+  <% @response_lname = @firebase.get(@link_lname) %>
+  <% @response_interests = @firebase.get(@link_interests) %>
+</head>
 
-<p>
-  <strong>Username:</strong>
-  <%= @client.username %>
-</p>
+<body style ="background-image: url(/assets/indiv-client-bg.svg)">
+  <div class = "index__title rfont">
+      <span class = index__heading><%= @response_fname.body %> <%= @response_lname.body %></span>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @client.email %>
-</p>
+  <div class = "indiv__information">
+    <div class = "indiv__left rfont">
+      <h2 style = "color:#eb4034" > About Me</h2>
+        <div class = "indiv__field">
+            <span class = "indiv__type">Full Name: </span> <span><%= @response_fname.body %> <%= @response_lname.body %></span>
+        </div>
 
-<p>
-  <strong>User:</strong>
-  <%= @client.user %>
-</p>
+        <div class = "indiv__field">
+            <span class = "indiv__type">Email: </span> <span><%= @response_email.body %></span>
+        </div>
 
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+        <div class = "indiv__field">
+            <span class = "indiv__type">Interests: </span> <span><%= @response_interests.body %></span>
+        </div>
+    </div>
+  </div>
+
+</body>
+

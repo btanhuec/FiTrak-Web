@@ -32,7 +32,44 @@
 .client_card{
     height:10vh;
     border-radius:20px;
-    background-color:gray;
+    background:url(/assets/clients-card-bg.svg);
+    background-size:cover;
     color:white;
 
+}
+
+
+.client_show_button{
+    background: Transparent;
+    border: none;
+    float:right;
+    height:10vh;
+    width:100%;
+    position:absolute;
+    top:0;
+
+}
+
+.client_show_button:hover{
+    background: Transparent;
+}
+
+
+.indiv__information{
+    width:50%;
+    margin-left:10%;
+    
+}
+
+.indiv__left{
+    width:50%;
+}
+
+.indiv__field{
+    color:white;
+    font-size:1.5rem;
+}
+
+.indiv__type{
+    color:#eb4034;
 }
