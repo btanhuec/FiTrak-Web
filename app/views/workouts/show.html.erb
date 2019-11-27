@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div class="card bg-secondary new_workout--card" style="margin: 20vh;">
-  <div class="row">
-    <h3 style="text-align: center;">
+  <div class="row" style="text-align: center;">
+    <h3>
       <strong>Workout:</strong>
       <%= @workout.name %>
 
@@ -11,15 +11,15 @@
     </h3>
   </div>
 
-  <div class="row">
+  <div class="row" style="margin-bottom: 1vh;">
     <div class="col-5 excercise__content">
-      <span style="color: red">Exercise Name</span>
+      <span><u><b>Exercise Name</b></u></span>
     </div>
     <div class="col-3 excercise__content">
-      <span style="color: red">Number of Sets</span>
+      <span><u><b>Number of Sets</b></u></span>
     </div>
     <div class="col-3 excercise__content">
-      <span style="color: red">Number of Reps</span>
+      <span><u><b>Number of Reps</b></u></span>
     </div>
   </div>
 
@@ -37,8 +37,17 @@
       </div>
     </div>
   <%end%>
+
+  <br>
+
+  <div>
+    <%= link_to 'Add Excercise', new_excercise_path(workout_id: @workout.id)%>
+    <%= link_to 'Edit', edit_workout_path(@workout) %>
+    <%= link_to 'Back', workouts_path %>
+  </div>
+
+  <br>
+
 </div>
 
-<%= link_to 'Add Excercise', new_excercise_path(workout_id: @workout.id)%>
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', workouts_path %>
+
