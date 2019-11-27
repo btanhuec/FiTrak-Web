@@ -6,10 +6,11 @@
 
   <div class="workouts__container lfont">
     <% @workouts.each do |workout| %>
-    <div class="workouts__wrap hvr-grow">
+    <div class=" workouts__wrap hvr-grow">
       <div class="workouts__card --noborder">
           <%= workout.name%>
       </div>
+      <br>
       <div class="workouts__card">
         <div class="workouts__left">
           <%= workout.description %>
@@ -19,43 +20,47 @@
 
           </div>
         </div>
+
         <div class="workouts__right">
+
           <div class="workouts__excercises__card">
-          <div class="workouts__right__title">
-            <div class="row">
-              <div class="col-5 excercise__content--title">
-                <span>Excercise</span>
-              </div>
-              <div class="col-3 excercise__content--title">
-                <span>Sets</span>
-              </div>
-              <div class="col-3 excercise__content--title">
-                <span>Reps</span>
-              </div>
-            </div>
-          </div>
-          <% workout.excercises.each do |excercise| %>
-
-            <div class="row">
-              <div class="col-5 excercise__content">
-                <span><%= excercise.title %></span>
-              </div>
-              <div class="col-3 excercise__content">
-                <span><%= excercise.sets %></span>
-              </div>
-              <div class="col-3 excercise__content">
-                <span><%= excercise.reps %></span>
+            <div class="workouts__right__title">
+              <div class="row">
+                <div class="col-5 excercise__content--title">
+                  <span>Excercise</span>
+                </div>
+                <div class="col-3 excercise__content--title">
+                  <span>Sets</span>
+                </div>
+                <div class="col-3 excercise__content--title">
+                  <span>Reps</span>
+                </div>
               </div>
             </div>
 
-          <%end%>
+            <% workout.excercises.each do |excercise| %>
+              <div class="row">
+                <div class="col-5 excercise__content">
+                  <span><%= excercise.title %></span>
+
+                </div>
+                <div class="col-3 excercise__content">
+                  <span><%= excercise.sets %></span>
+                </div>
+                <div class="col-3 excercise__content">
+                  <span><%= excercise.reps %></span>
+                </div>
+              </div>
+            <%end%>
           </div>
+
           <div class="workouts__icons__row">
             <%= link_to '<i class="far fa-eye"></i>'.html_safe, workout, :class => "icon_link" %><br>
             <%= link_to '<i class="fas fa-pen-square"></i>'.html_safe, edit_workout_path(workout), :class => "icon_link" %><br>
             <%= link_to '<i class="fas fa-minus-square"></i>'.html_safe, workout, method: :delete, data: { confirm: 'Are you sure?' }, :class => "icon_link" %><br>
           </div>
         </div>
+
       </div>
     </div>
 
@@ -86,5 +91,6 @@
     <% end %>
   </tbody>
 </table>
-<%= link_to 'New Workout', new_workout_path %>
+
+<%= link_to 'New Workout', new_workout_path%>
 </body>

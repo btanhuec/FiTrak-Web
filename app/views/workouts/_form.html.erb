@@ -1,5 +1,7 @@
 <%= form_with(model: workout, local: true) do |form| %>
 
+<div class="card bg-secondary new_workout--card">
+  <h2 class="card-header afont" style="color: white; font-size: 5vh;">Create a New Workout</h2>
   <% if workout.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
@@ -11,18 +13,31 @@
       </ul>
     </div>
   <% end %>
+
     <%= form.hidden_field :current_user, value: @current_user %>
-  <div class="field">
-    <%= form.label :name %>
+  <br>
+  <div class="field afont" style="color: white; font-size: 3vh;">
+    <%= form.label "Workout name"%>
+    <br>
     <%= form.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="field afont" style="color: white; font-size: 3vh;">
     <%= form.label :description %>
+    <br>
     <%= form.text_area :description %>
   </div>
 
-  <div class="actions">
+  <div class="actions afont" style="color: white; font-size: 3vh;">
     <%= form.submit %>
   </div>
+  <br>
+
+  <!-- <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div> -->
+</div>
+
 <% end %>

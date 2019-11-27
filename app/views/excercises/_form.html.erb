@@ -1,4 +1,8 @@
 <%= form_with(model: excercise, local: true) do |form| %>
+
+<div class="card bg-secondary new_exercise--card">
+  <h2 class="card-header afont" style="color: white; font-size: 5vh;">Create a New Exercise</h2>
+
   <% if excercise.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(excercise.errors.count, "error") %> prohibited this excercise from being saved:</h2>
@@ -10,29 +14,34 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :title %>
+  <br>
+  <div class="field afont" style="color: white; font-size: 3vh;">
+    <%= form.label "Exercise Name" %>
+    <br>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
-    <%= form.label :sets %>
+  <div class="field afont" style="color: white; font-size: 3vh;">
+    <%= form.label "Number of Sets (per exercise)" %>
+    <br>
     <%= form.number_field :sets %>
   </div>
 
-  <div class="field">
-    <%= form.label :reps %>
+  <div class="field afont" style="color: white; font-size: 3vh;">
+    <%= form.label "Number of Reps (per set)" %>
+    <br>
     <%= form.number_field :reps %>
   </div>
 
-  <div class="field">
+  <div class="field afont" style="color: white; font-size: 3vh;">
     <%= form.hidden_field :workout_id, value: @workout.id %>
     <%# <%= form.label :workout_id %> %>
     <%# <%= form.text_field :workout_id %> %>
-  </div>
+  </div> 
 
+  <br>
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>
