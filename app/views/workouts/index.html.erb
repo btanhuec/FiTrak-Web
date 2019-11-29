@@ -10,7 +10,7 @@
       <div class="workouts__card --noborder">
           <%= workout.name%>
           <div class = "workouts__assign__btn">
-            ASSIGN THIS WORKOUT
+            <%= link_to 'Assign To Client', workouts_assign_to_client_path(:item_id => workout.id), :class => "btn btn-primary" %><br>
           </div>
       </div>
       <br>
@@ -67,7 +67,7 @@
 
     </div>
     <!-- <div class = "workouts__assign__btn">
-        <%= link_to '<i class="far fa-eye"></i>'.html_safe, workout, :class => "icon_link" %>
+        <%= link_to '<i class="far fa-eye"></i>'.html_safe, workouts_assign_to_client_path(workout), :class => "icon_link" %>
         <div>
 
         </div>
