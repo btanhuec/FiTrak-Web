@@ -69,6 +69,11 @@ class WorkoutsController < ApplicationController
     end
   end
 
+  def assign_to_client
+    # @workout= Workout.find(passed)
+    @cur_workout = Workout.find(params[:item_id])
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'workouts/assign_to_client'
+  get 'workouts/assignworkout'
   resources :appointments
   resources :clients
   resources :profiles
