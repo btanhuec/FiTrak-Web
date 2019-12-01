@@ -25,11 +25,12 @@ class AppointmentsController < ApplicationController
   # POST /appointments.json
   def create
     @appointment = Appointment.new(appointment_params)
-
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/APPTS')
     respond_to do |format|
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
+        @response = firebase.push(@appointment.client_username, {@appointment.date => @appointment.start_time})
       else
         format.html { render :new }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
@@ -69,6 +70,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:client_username, :date, :start_time, :end_time)
+      params.require(:appointment).permit(:client_username, :date, :start_time)
     end
 end
