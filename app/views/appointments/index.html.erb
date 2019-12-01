@@ -19,87 +19,62 @@
 <body>
 <div class="main_container">
   <h1 class="lfont" style="color: grey">All appointments</h1>
+  <br>
+  <% if @clients_arr != nil %>
+    <% @clients_arr.each_slice(4) do |slice| #for each of this trainer's clients%>   
+      <div class="row client_row_padding">
+      <% slice.each do |s| %>
+        <% @appts_arr.each do |c| #search for this client in the array obj%>
+          <% if s == c[0] #if match found %>
+            <% @clientName = c[0] %>
+            <% @appts_response = @firebaseA.get(@appts_link + "/" + @clientName) %>
+            <% @dates = @appts_response.body %>
 
-<!--#for each client of this trainer 
-    #seach thru appts obj for a matching client
-      #if trainerclient matches apptclient
-        #create a card that consists of all appts for that client -->
-  
-  <% @clients_arr.each_slice(4) do |slice| #for each of this trainer's clients%>   
-    <div class="row client_row_padding">
-    <% slice.each do |s| %>
-      <% @appts_arr.each do |c| #search for this client in the array obj%>
-        <% if s == c[0] #if match found %>
-          <!-- create a new card for this client, 
-          consisting of their name and a list of their appointment dates -->
-          <% @clientName = c[0] %>
-          <% @appts_response = @firebaseA.get(@appts_link + "/" + @clientName) %>
-          <% @dates = @appts_response.body %>
-
-          
-          <div class="col-sm-3 hvr-float">
             
-            <div class="card">
-              <div>
-                <span class = "client_name rfont"><%= @clientName %></span>
-              </div>
-
-              <div class="row nfont" style="margin: 3%">
-                <span class="col"> Appointments: </span>
-                <div class="col">
-                  <% @dates.each do |d| %>
-                    <% @thisDate = d[0] %>
-                    <% @date_response = @firebaseA.get(@appts_link + "/" + @clientName + "/" + @thisDate) %>
-                    <% @thisTime = @date_response.body %>
-
-                    <div style="color: black">
-                      <span><%= d[0] %>: <%= @thisTime %></span>
-                    </div>
-                  <% end %>
+            <div class="col-sm-3 hvr-float">
+              
+              <div class="card">
+                <div>
+                  <span class = "client_name rfont"><%= @clientName %></span>
                 </div>
+
+                <div class="row nfont" style="margin: 3%">
+                  <span class="col"> Appointments: </span>
+                  <div class="col">
+                    <% @dates.each do |d| %>
+                      <% @thisDate = d[0] %>
+                      <% @date_response = @firebaseA.get(@appts_link + "/" + @clientName + "/" + @thisDate) %>
+                      <% @thisTime = @date_response.body %>
+
+                      <div style="color: black">
+                        <span><%= d[0] %>: <%= @thisTime %></span>
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+
               </div>
 
             </div>
 
-          </div>
 
-
+          <% end %>
         <% end %>
-      <% end %>
-      <% end %>
-    </div>
-    
-  <% end %>
-</div>
-</body>
-<!--
-<table>
-  <thead>
-    <tr>
-      <th>Client username</th>
-      <th>Date</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @appointments.each do |appointment| %>
-      <tr>
-        <td><%= appointment.client_username %></td>
-        <td><%= appointment.date %></td>
-        <td><%= appointment.start_time %></td>
-        <td><%= appointment.end_time %></td>
-        <td><%= link_to 'Show', appointment %></td>
-        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <% end %>
+      </div>
+      
     <% end %>
-  </tbody>
-</table> -->
+  <% else %>
+    <div>
+      <span> No appointments! </div>
+    </div>
+  <% end %>
+  <br><br>
+  <%= link_to 'New Appointment', new_appointment_path %>
 
-<br>
-<br>
+</div>
 
-<%= link_to 'New Appointment', new_appointment_path %>
+</body>
+
+
+

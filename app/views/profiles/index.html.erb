@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <%= current_user.email%>
-<div class="myprofile__card overlay-light afont">
+<div class="myprofile__card overlay-light afont" style="color: white">
   <% @profiles.each do |profile| %>
     <% if (profile.user_id == current_user.id) %>
       <div class="myprofile__card__edit">
@@ -12,51 +12,43 @@
         Your Profile Page
       </div>
       <div class="header__subtitle">
-        This will be the information potential clients will see!
+        (This will be the information potential clients will see!)
       </div>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        Username:
+        Username: <%= profile.username %>
       </div>
-      <%= profile.username %>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        Name:
-      </div>
-      <%= profile.first_name %>
-      <%= profile.last_name %>
+        Name: <%= profile.first_name %> <%= profile.last_name %>
+      </div>  
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        Email:
+        Email: <%= profile.email %>
       </div>
-      <%= profile.email %>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        Age:
+        Age: <%= profile.age %>
       </div>
-      <%= profile.age %>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        Gender:
+        Gender: <%= profile.gender %>
       </div>
-      <%= profile.gender %>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-          Years Of Experience:
+          Years Of Experience: <%= profile.experience %>
       </div>
-      <%= profile.experience %>
     </div>
     <div class="myprofile__field__container">
       <div class="myprofile__field">
-        About Me:
+        About Me: <%= profile.about_me %>
       </div>
-      <%= profile.about_me %>
     </div>
     <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
