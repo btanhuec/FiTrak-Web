@@ -11,9 +11,6 @@
     <div class=" workouts__wrap hvr-grow">
       <div class="workouts__card --noborder">
           <%= workout.name%>
-          <div class = "workouts__assign__btn">
-            <%= link_to 'Assign To Client', workouts_assign_to_client_path(:item_id => workout.id), :class => "btn btn-primary" %><br>
-          </div>
       </div>
       <br>
       <div class="workouts__card card__bg">
