@@ -16,6 +16,9 @@
     <span class = index__heading>CLIENTS</span>
   </div>
   <div class = "client_cards_container">
+    <% if @clients_arr.nil? %>
+     <h1> NO CLIENTS AVAILABLE</h1>
+    <% else %>
       <% @clients_arr.each_slice(4) do |slice| %>  
       <div class="row client_row_padding">
           <% slice.each do |c| %>
@@ -50,6 +53,7 @@
           <% end %>
       </div>
       <% end %>
+    <% end %>
   </div>
     
 </body>
