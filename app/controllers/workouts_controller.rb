@@ -72,6 +72,10 @@ class WorkoutsController < ApplicationController
   def assign_to_client
     # @workout= Workout.find(passed)
     @cur_workout = Workout.find(params[:item_id])
+
+    firebase = Firebase::Client.new('https://fitrak-a97c2.firebaseio.com/WORKOUTS/' + @cur_workout.name)
+    @response = firebase.push(:client_names, params[:this_client])
+
   end
 
   private

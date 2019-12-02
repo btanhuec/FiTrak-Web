@@ -1,7 +1,16 @@
 <body>
-    <div class = "assign_wrap">
-        <div class = "workouts__title lfont">
-            Assign "<%= @cur_workout.name %>" to
-        </div>
-    </div>
+  <div class="card bg-secondary new_workout--card">
+  <h2 class="card-header afont" style="color: white; font-size: 5vh;">Assign "<%= @cur_workout.name %>" to a client</h2>
+    <br>
+    <%= form_with do |f|%>
+      <br>
+
+      <%= text_field_tag :client_name %>
+      <br> <br>
+      <%= link_to 'Assign To Client', workouts_assign_to_client_path(:item_id => @cur_workout.id, :this_client => :client_name), :class => "btn btn-primary" %><br>
+    <% end %>
+    <br>
+
+
+  </div>
 </body>
