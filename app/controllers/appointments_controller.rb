@@ -30,7 +30,7 @@ class AppointmentsController < ApplicationController
       if @appointment.save
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
-        @response = firebase.push(@appointment.client_username, {@appointment.date => @appointment.start_time})
+        @response = firebase.set(@appointment.client_username, {@appointment.date => @appointment.start_time})
       else
         format.html { render :new }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
