@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<%= current_user.email%>
+
 <div class="myprofile__card overlay-light afont" style="color: white">
+
   <% @profiles.each do |profile| %>
     <% if (profile.user_id == current_user.id) %>
       <div class="myprofile__card__edit">
@@ -50,7 +51,8 @@
         About Me: <%= profile.about_me %>
       </div>
     </div>
-    <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %> <br>
+    <%= link_to 'Make A Profile', new_profile_path%><br>
     <% end %>
   <% end %>
 </div>

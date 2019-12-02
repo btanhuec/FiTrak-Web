@@ -18,7 +18,9 @@
 
 <body>
 <div class="main_container">
-  <h1 class="lfont" style="color: grey">All appointments</h1>
+<h3 class="lfont" style="color: grey"><%= link_to 'New Appointment', new_appointment_path %></h3>
+  <h1 class="lfont" style="color: grey">All appointments </h1>
+  
   <br>
   <% if @clients_arr != nil %>
     <% @clients_arr.each_slice(4) do |slice| #for each of this trainer's clients%>   
@@ -69,8 +71,9 @@
       <span> No appointments! </div>
     </div>
   <% end %>
+  
   <br><br>
-  <%= link_to 'New Appointment', new_appointment_path %>
+  
 
 </div>
 

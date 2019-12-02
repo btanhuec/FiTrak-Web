@@ -13,8 +13,8 @@
   <%= form.hidden_field :current_user, value: @current_user %>
   <%# <%= form.hidden_field :email, value: @current_user.email %>
   <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+    <% @user_tag = current_user.email.split("@").first %>
+    <%= form.hidden_field :username, value:@user_tag  %>
   </div>
 
   <div class="field">
