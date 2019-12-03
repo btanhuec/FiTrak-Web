@@ -2,7 +2,7 @@
 
 
 <div class="myprofile__card overlay-light afont" style="color: white">
-
+<%= link_to 'Make A Profile', new_profile_path%><br>
   <% @profiles.each do |profile| %>
     <% if (profile.user_id == current_user.id) %>
       <div class="myprofile__card__edit">
