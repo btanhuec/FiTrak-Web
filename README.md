@@ -1,24 +1,19 @@
-# README
+﻿# FiTrak
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FitTrak is an application used for connecting users who wish to get fit and exercise with personal trainers. The web application is meant to be used by the aforementioned trainers. Potential users use the following web app:
+[https://github.com/nayrng/FitTrak-Android](https://github.com/nayrng/FitTrak-Android)
 
-Things you may want to cover:
+## Features!
 
-* Ruby version
+-   Users can sign up with any Trainer that uses our service
+-   Trainers can assign workouts and schedule appointments with their Clients
 
-* System dependencies
+### Installation
 
-* Configuration
+- Install Ruby, then install Rails [https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails)
+- Run 'bundle install' and 'rails db:migrate' in the terminal
+- Run 'rails s' in the terminal
 
-* Database creation
+# WARNING
+- The app is optimized for Ruby 2.6.3. Please ensure that the version of Ruby being used is 2.6.3 as well.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
